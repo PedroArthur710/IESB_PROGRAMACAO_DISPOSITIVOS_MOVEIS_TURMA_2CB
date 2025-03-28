@@ -1,14 +1,22 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Perfil = () => {
+export default function Perfil(props) {
+
+  console.log(props)
+
   return (
-    <View>
-      <Text>Perfil</Text>
+    <View style={styles.container}>
+      <Text style={{ fontSize: 40 }}>Perfil</Text>
+      <Text style={{ fontSize: 40 }}>Nome: {props.nome}</Text>
+      <Text style={{ fontSize: 40 }}>Idade: {props.idade}</Text>
+      <Text style={{ fontSize: 40 }}>Email: {props.email}</Text>
     </View>
   )
 }
 
-export default Perfil
-
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'purple'
+  }
+})
